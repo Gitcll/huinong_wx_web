@@ -1,0 +1,5 @@
+
+<view>用户名: <input type="text" placeholder="请输入用户名" bindinput="getUserName" /></view>
+<view>密码: <input class="weui-input" type="text" password placeholder="请输入密码" bindinput="getPassWord" /></view>
+<button bindtap="login">登录</button>
+<button bindtap="register">注册</button>

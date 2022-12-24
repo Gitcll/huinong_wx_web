@@ -9,6 +9,7 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     canIUseGetUserProfile: false,
+    indexStr: '0',
     canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName') // 如需尝试获取用户信息可改为false
   },
   // 事件处理函数
@@ -23,6 +24,29 @@ Page({
         canIUseGetUserProfile: true
       })
     }
+    wx.request({
+      url: 'http://localhost:8080/index',
+      method: 'GET',
+      success: (res) => {
+        console.log(res.data)
+        this.setData({
+          indexStr: res.data
+        })
+      }
+    })
+
+    wx.request({
+      url: 'http://localhost:8080/count',
+      method: 'POST',
+      data: {
+        num1: 1,
+        num2: 2
+      },
+      success: (res) => {
+        console.log(res.data)
+        this.setData({indexStr: res.data})
+      }
+    })
   },
   getUserProfile(e) {
     // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
