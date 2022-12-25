@@ -1,0 +1,63 @@
+/* pages/home/home.wxss */
+.container {
+	background-color: #39bf3e;
+}
+
+.logImage{
+	width: 60px;
+	height: 55px;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+}
+
+.containerText{
+	width: 100px;
+	display: inline-block;
+	color: #FFFFFF;
+	font-size: 12px;
+}
+.containerTextLeft{
+	text-align: left;
+}
+.containerTextCenter{
+	text-align: center;
+}
+.containerTextRight{
+	text-align: right;
+}
+
+.input{
+	width: 300px;
+	height: 30px;
+	border: 1px solid #FFFFFF;
+	border-radius: 15px;
+	color: #a7a7a7;
+	font-size: 14px;
+	line-height: 15px;
+	text-align: center;
+	background-color: #FFFFFF;
+}
+
+.hall{
+	width: 300px;
+	height: 120px;
+	margin-top: 10px;
+	background-color: #FFFFFF;
+	border-radius: 10px;
+}
+.hallCall{
+	width: 60px;
+	display: inline-block; 
+	text-align: center;
+	font-size: 12px;
+	color: #787878;
+	margin-top: 5px;
+}
+.hallImage{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	border-radius: 10px;
+	
+}

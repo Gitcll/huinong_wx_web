@@ -27,7 +27,7 @@ Page({
   
   login: function() {
     console.log("用户名" + this.data.userName + "_密码" + this.data.passWord)
-    if(!this.userName || !this.passWord){
+    if(!this.data.userName || !this.data.passWord){
       wx.showModal({
         title: '',
         content: '用户名密码错误'
@@ -44,7 +44,7 @@ Page({
           console.log(res.data)
           if(res.data == "success"){
             wx.navigateTo({
-              url: '/pages/index/index',
+              url: '/pages/home/home',
             })
           }
         }
@@ -53,7 +53,7 @@ Page({
   },
   register: function(){
     //console.log("用户名" + this.data.userName + "_密码" + this.data.passWord)
-    if(!this.userName || !this.passWord){
+    if(!this.data.userName || !this.data.passWord){
       wx.showModal({
         title: '',
         content: '请输入正确用户名和密码'
