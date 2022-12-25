@@ -3,7 +3,7 @@
 	<view class="">
 		<image class="logImage" src="image/github_logo.png"></image>
 
-	<view class="" >
+	<view class="containerFreeText">
 		<view class="containerText containerTextLeft">农货批发</view>
 		<view class="containerText containerTextCenter">场地货源</view>
 		<view class="containerText containerTextRight">买家保障</view>
@@ -17,4 +17,22 @@
 			</view>
 	</view>
 	</view>
+	<view class="containerSell">
+		<view class="containerSellText containerSellTextCenter">推荐</view>
+		<view class="containerSellText containerSellTextCenter">农产品</view>
+		<view class="containerSellText containerSellTextCenter">农用物资</view>
+		<view class="containerSellText containerSellTextCenter">农业服务</view>
+		
+		<view class="hallSell">
+			<view class="hallCallSell" wx:for="{{hallMeunNong}}" wx:for-index="key" wx:for-item="iterName">
+					<image class="hallImage" src="data:image/jpg;base64,{{iterName.meunimage}}"></image>
+					<view>{{iterName.meunname}}</view>
+			</view>
+			<view class="hallCallSell">
+					<image class="hallImage" src="image/github_logo.png"></image>
+					<view>全部</view>
+			</view>
+		</view>
+	</view>
+
 </view>

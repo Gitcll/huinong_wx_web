@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    hallMeun: []
+    hallMeun: [],
+    hallMeunNong: []
   },
 
   /**
@@ -20,6 +21,18 @@ Page({
         console.log(res.data),
         this.setData({
           hallMeun: res.data
+        })
+      }
+    })
+
+    wx.request({
+      url: 'http://localhost:8080/hall/meun_nong',
+      method: 'GET',
+      header: { 'content-type': 'application/x-www-form-urlencoded' },
+      success: (res) => {
+        console.log(res.data),
+        this.setData({
+          hallMeunNong: res.data
         })
       }
     })
